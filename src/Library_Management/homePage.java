@@ -33,6 +33,13 @@ public class homePage {
         memberBtn.setBounds(200, 150, 200, 40);
         memberBtn.setFocusable(false);
         frame.add(memberBtn);
+        memberBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new member_page();
+                frame.dispose();// Opens the registration form
+            }
+        });
 
         // Book Button
         JButton bookBtn = new JButton("Book");

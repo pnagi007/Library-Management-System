@@ -37,6 +37,21 @@ public class bookPage {
 
         // Action when an ID is selected
         idBox.addActionListener(e -> fetchBookDetails());
+        
+        JButton backBtn = new JButton("BACK");
+        backBtn.setBounds(50, 300, 100, 30); 
+        backBtn.setBackground(Color.DARK_GRAY);
+        backBtn.setForeground(Color.WHITE);
+        frame.add(backBtn);
+
+        // 2. Add the action listener here
+        backBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose(); // Closes the Book Details window
+                new homePage();  // Opens a fresh Home Page
+            }
+        });
 
         frame.setVisible(true);
     }
