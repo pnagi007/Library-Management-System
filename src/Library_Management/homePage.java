@@ -53,6 +53,34 @@ public class homePage {
                 frame.dispose();
             }
         });
+        
+        //Issue Book Button 
+        JButton issueBtn = new JButton("Issue Book");
+        issueBtn.setBounds(200, 290, 200, 40);
+        issueBtn.setFocusable(false);
+        frame.add(issueBtn);
+        issueBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new IssueBookPage(); 
+                frame.dispose();     
+            }
+        });
+        
+        // Logout Button 
+        JButton logoutBtn = new JButton("LOGOUT");
+        logoutBtn.setBounds(250, 380, 100, 30);
+        logoutBtn.setBackground(new Color(220, 20, 60)); // Crimson Red
+        logoutBtn.setForeground(Color.WHITE);
+        frame.add(logoutBtn);
+        logoutBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose(); 
+                new GUI();       
+            }
+        });
+        
         frame.setVisible(true);
     }
 }
